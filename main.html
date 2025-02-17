@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爸爸生日快乐！</title>
+    <link rel="icon" type="image/x-icon" href="cake-icon.png">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #ff6600;
+            font-size: 3em;
+        }
+        p {
+            font-size: 1.5em;
+            color: #333;
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.2em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <h1>爷爷，生日快乐！</h1>
+    <div class="message">
+        <p>祝你，百事可乐，万事芬达，心情雪碧，一周七喜！</p>
+        <p>愿未来的每一天都充满幸福和快乐！</p>
+        <img src="cake-f9f9f9.png" id="cake" sizes="64x64">
+    </div>
+    <script>
+        var cakeImg = [
+            "cake-red.png",
+            "cake-orange.png",
+            "cake-yellow.png",
+            "cake-green.png",
+            "cake-blue-1.png",
+            "cake-blue-2.png",
+            "cake-purple.png"
+        ];
+
+        var element = document.getElementById("cake");
+
+        var currentIndex = 0;
+
+        function changeCakeImage() {
+            element.src = cakeImg[currentIndex];
+            currentIndex = (currentIndex + 1) % cakeImg.length;
+        }
+
+        setInterval(changeCakeImage, 1000);
+    </script>
+</body>
+</html>
